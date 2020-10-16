@@ -1,0 +1,6 @@
+framework module Pods_RatesRSSTests {
+  umbrella header "Pods-RatesRSSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
