@@ -7,7 +7,8 @@ target 'RatesRSS' do
 
   # Pods for RatesRSS
   pod 'Firebase/Auth'
-  pod 'MySqlSwiftNative', '~> 1.0'
+  # pod 'MySqlSwiftNative', '~> 1.0'
+	pod 'OHMySQL', '~> 2.1'
   pod 'Alamofire', '~> 5.2'
   pod 'AlamofireRSSParser'
 
