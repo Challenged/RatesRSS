@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		402C6DA22539B8FB00B3F0D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 402C6DA12539B8FB00B3F0D2 /* GoogleService-Info.plist */; };
+		407B253D253A07A900E55E6D /* RSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407B253C253A07A900E55E6D /* RSSViewController.swift */; };
+		407B2542253A0E4A00E55E6D /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407B2541253A0E4A00E55E6D /* CurrencyItem.swift */; };
 		40E935B52539ADD200C7E785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E935B42539ADD200C7E785 /* AppDelegate.swift */; };
 		40E935B72539ADD200C7E785 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E935B62539ADD200C7E785 /* SceneDelegate.swift */; };
 		40E935B92539ADD200C7E785 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E935B82539ADD200C7E785 /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		3187B2FA8F392EFA76618F27 /* Pods_RatesRSSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesRSSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B22FE853DCA59BA1F427DA7 /* Pods_RatesRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatesRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		402C6DA12539B8FB00B3F0D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		407B253C253A07A900E55E6D /* RSSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSViewController.swift; sourceTree = "<group>"; };
+		407B2541253A0E4A00E55E6D /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrencyItem.swift; path = RatesRSS/Controller/CurrencyItem.swift; sourceTree = SOURCE_ROOT; };
 		40E935B12539ADD200C7E785 /* RatesRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RatesRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E935B42539ADD200C7E785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E935B62539ADD200C7E785 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				40E935B42539ADD200C7E785 /* AppDelegate.swift */,
 				40E935B62539ADD200C7E785 /* SceneDelegate.swift */,
 				40E935B82539ADD200C7E785 /* ViewController.swift */,
+				407B253C253A07A900E55E6D /* RSSViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 		40EBCC2E2539B64500F83D85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				407B2541253A0E4A00E55E6D /* CurrencyItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,8 +449,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E935B92539ADD200C7E785 /* ViewController.swift in Sources */,
+				407B253D253A07A900E55E6D /* RSSViewController.swift in Sources */,
 				40E935B52539ADD200C7E785 /* AppDelegate.swift in Sources */,
 				40E935B72539ADD200C7E785 /* SceneDelegate.swift in Sources */,
+				407B2542253A0E4A00E55E6D /* CurrencyItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

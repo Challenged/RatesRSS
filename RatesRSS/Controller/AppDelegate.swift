@@ -16,9 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 
+//		инициализация службы логина
 		FirebaseApp.configure()
 
 		return true
+	}
+
+	func application(_ application: UIApplication, shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
+//		сохранять состояние приложения
+		return true
+	}
+
+	func application(_ application: UIApplication, shouldRestoreSecureApplicationState coder: NSCoder) -> Bool {
+//		восстановить состояние приложения если пользователь авторизован
+		var restore = false
+
+		if Auth.auth().currentUser != nil {
+			restore = true
+		}
+
+		return restore
 	}
 
 	// MARK: UISceneSession Lifecycle

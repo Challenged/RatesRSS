@@ -9,8 +9,13 @@ target 'RatesRSS' do
   pod 'Firebase/Auth'
   # pod 'MySqlSwiftNative', '~> 1.0'
 	pod 'OHMySQL', '~> 2.1'
+
+	#RSS парсер
   pod 'Alamofire', '~> 5.2'
   pod 'AlamofireRSSParser'
+
+	#прогресс спиннер
+	pod 'SVProgressHUD'
 
   target 'RatesRSSTests' do
     inherit! :search_paths

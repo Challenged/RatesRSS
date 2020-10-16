@@ -46,12 +46,14 @@ PODS:
   - nanopb/encode (1.30906.0)
   - OHMySQL (2.1.3)
   - PromisesObjC (1.2.11)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AlamofireRSSParser
   - Firebase/Auth
   - OHMySQL (~> 2.1)
+  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -67,6 +69,7 @@ SPEC REPOS:
     - nanopb
     - OHMySQL
     - PromisesObjC
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
@@ -81,7 +84,8 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   OHMySQL: 8bc54d2b8b9e1acfa0e652b18856a9cdbb24c431
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 7109ba6eda27a9401b465745d1e8265b04b29bb0
+PODFILE CHECKSUM: 9f4205550e722502a968c5d0c3696821eb2df4dc
 
 COCOAPODS: 1.8.4

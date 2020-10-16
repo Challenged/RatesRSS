@@ -12,7 +12,7 @@
         <!--Логин-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Логин" id="BYZ-38-t0r" customClass="ViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Логин" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,19 +24,25 @@
                                 <rect key="frame" x="100" y="244" width="214" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2x-7j-rQy">
                                 <rect key="frame" x="100" y="328" width="214" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-TR-ZA0">
-                                <rect key="frame" x="183.5" y="412" width="60" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-TR-ZA0">
+                                <rect key="frame" x="172" y="412" width="70" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="rJb-Ov-kOa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="войти"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mex-HB-S2Z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото: Gerd Altmann, источник: Pixabay " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkf-7h-STx">
                                 <rect key="frame" x="10" y="824" width="279" height="18"/>
@@ -66,12 +72,31 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="fBt-Gx-aL4" id="flT-cJ-arV"/>
+                        <outlet property="login" destination="KcH-Q0-ews" id="Gq9-Zq-DA1"/>
                         <outlet property="loginButton" destination="1jL-TR-ZA0" id="IVG-gv-a25"/>
+                        <outlet property="pwd" destination="W2x-7j-rQy" id="7HN-Ak-u1M"/>
+                        <segue destination="c03-CH-Hcs" kind="show" identifier="goToRSS" destinationCreationSelector="goToRSS" id="E4l-b9-M3b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u9g-lZ-cGQ">
+            <objects>
+                <viewController storyboardIdentifier="RSS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c03-CH-Hcs" customClass="RSSViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y8a-mV-sqI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="d99-aG-vwV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xVv-dT-sR1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdt-sz-gLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="94"/>
         </scene>
     </scenes>
     <resources>
