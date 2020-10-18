@@ -100,6 +100,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-dw-MFs">
                                 <rect key="frame" x="140.5" y="573" width="133" height="30"/>
                                 <state key="normal" title="Узнать курс валют"/>
+                                <connections>
+                                    <action selector="getRates:" destination="c03-CH-Hcs" eventType="touchUpInside" id="jYF-zR-pMR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите валюту и дату по желанию" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap0-1X-5Yk">
                                 <rect key="frame" x="10" y="50" width="394" height="21"/>
@@ -110,6 +113,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIi-0k-Hzf">
                                 <rect key="frame" x="125" y="623" width="164" height="30"/>
                                 <state key="normal" title="Обновить базу данных"/>
+                                <connections>
+                                    <action selector="getDataForDB:" destination="c03-CH-Hcs" eventType="touchUpInside" id="TQq-JP-Yvz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d99-aG-vwV"/>

@@ -42,36 +42,36 @@ class ViewController: UIViewController {
 //		SVProgressHUD.show(withStatus: "Подождите")
 
 // авторизация пользователя
-		Auth.auth().signIn(withEmail: login.text ?? "test@123.com", password: pwd.text ?? "test-test") { (authDataResult, error) in
-			// язык сообщений логин модуля
-			Auth.auth().languageCode = "ru"
-
-			if error != nil {
-//				оповещение об ошибке при попытке входа
-				let alert = UIAlertController(title: "Ошибка входа:", message: "проверьте подключение к интернету, адрес эл. почты и пароль.", preferredStyle: .alert)
-				alert.addAction(UIAlertAction(title: "Окей", style: .cancel, handler: { _ in
-						NSLog("The login failure alert occured.")
-				}))
-
-				//		скрыть прогресс спиннер
-//				DispatchQueue.main.async {
-//					SVProgressHUD.showError(withStatus: "Ошибка входа: \(String(describing: error))")
-//				}
-//				SVProgressHUD.dismiss(withDelay: 0.7)
-				self.present(alert, animated: true, completion: nil)
-			} else {
-				// успешный вход
-
-				//	скрыть прогресс спиннер
-//				DispatchQueue.main.async {
-//					SVProgressHUD.showSuccess(withStatus: "Вход успешно выполнен")
-//				}
-//				SVProgressHUD.dismiss(withDelay: 0.7)
-
-//				 переход к следующему экрану
+//		Auth.auth().signIn(withEmail: login.text ?? "test@123.com", password: pwd.text ?? "test-test") { (authDataResult, error) in
+//			// язык сообщений логин модуля
+//			Auth.auth().languageCode = "ru"
+//
+//			if error != nil {
+////				оповещение об ошибке при попытке входа
+//				let alert = UIAlertController(title: "Ошибка входа:", message: "проверьте подключение к интернету, адрес эл. почты и пароль.", preferredStyle: .alert)
+//				alert.addAction(UIAlertAction(title: "Окей", style: .cancel, handler: { _ in
+//						NSLog("The login failure alert occured.")
+//				}))
+//
+//				//		скрыть прогресс спиннер
+////				DispatchQueue.main.async {
+////					SVProgressHUD.showError(withStatus: "Ошибка входа: \(String(describing: error))")
+////				}
+////				SVProgressHUD.dismiss(withDelay: 0.7)
+//				self.present(alert, animated: true, completion: nil)
+//			} else {
+//				// успешный вход
+//
+//				//	скрыть прогресс спиннер
+////				DispatchQueue.main.async {
+////					SVProgressHUD.showSuccess(withStatus: "Вход успешно выполнен")
+////				}
+////				SVProgressHUD.dismiss(withDelay: 0.7)
+//
+////				 переход к следующему экрану
 				self.performSegue(withIdentifier: "goToRSS", sender: self)
-			}
-		}
+//			}
+//		}
 	}	
 }
 
