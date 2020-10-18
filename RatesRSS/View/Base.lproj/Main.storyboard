@@ -83,27 +83,99 @@
             </objects>
             <point key="canvasLocation" x="139" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--RSSrequest-->
         <scene sceneID="u9g-lZ-cGQ">
             <objects>
-                <viewController storyboardIdentifier="RSS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c03-CH-Hcs" customClass="RSSViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RSS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c03-CH-Hcs" userLabel="RSSrequest" customClass="RSSViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y8a-mV-sqI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="ntD-Gr-wI4">
+                                <rect key="frame" x="47" y="327" width="320" height="216"/>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCA-Jz-eXI">
+                                <rect key="frame" x="47" y="91" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-dw-MFs">
+                                <rect key="frame" x="140.5" y="573" width="133" height="30"/>
+                                <state key="normal" title="Узнать курс валют"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите валюту и дату по желанию" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap0-1X-5Yk">
+                                <rect key="frame" x="10" y="50" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIi-0k-Hzf">
+                                <rect key="frame" x="125" y="623" width="164" height="30"/>
+                                <state key="normal" title="Обновить базу данных"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="d99-aG-vwV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="d99-aG-vwV" firstAttribute="trailing" secondItem="Ap0-1X-5Yk" secondAttribute="trailing" constant="10" id="05V-s9-faW"/>
+                            <constraint firstItem="ntD-Gr-wI4" firstAttribute="top" secondItem="OCA-Jz-eXI" secondAttribute="bottom" constant="20" id="1YN-e3-PFS"/>
+                            <constraint firstItem="OCA-Jz-eXI" firstAttribute="top" secondItem="Ap0-1X-5Yk" secondAttribute="bottom" constant="20" id="7JD-7Q-y27"/>
+                            <constraint firstItem="OCA-Jz-eXI" firstAttribute="centerX" secondItem="y8a-mV-sqI" secondAttribute="centerX" id="7XA-o6-CRz"/>
+                            <constraint firstItem="bdQ-dw-MFs" firstAttribute="top" secondItem="ntD-Gr-wI4" secondAttribute="bottom" constant="30" id="Ivg-6J-XNe"/>
+                            <constraint firstItem="Ap0-1X-5Yk" firstAttribute="top" secondItem="d99-aG-vwV" secondAttribute="top" constant="50" id="K4H-T9-6dY"/>
+                            <constraint firstItem="bdQ-dw-MFs" firstAttribute="centerX" secondItem="y8a-mV-sqI" secondAttribute="centerX" id="PdN-3f-azC"/>
+                            <constraint firstItem="ntD-Gr-wI4" firstAttribute="centerX" secondItem="y8a-mV-sqI" secondAttribute="centerX" id="azi-Rw-NJZ"/>
+                            <constraint firstItem="jIi-0k-Hzf" firstAttribute="centerX" secondItem="y8a-mV-sqI" secondAttribute="centerX" id="nip-G8-7DN"/>
+                            <constraint firstItem="jIi-0k-Hzf" firstAttribute="top" secondItem="bdQ-dw-MFs" secondAttribute="bottom" constant="20" id="qUT-r4-018"/>
+                            <constraint firstItem="Ap0-1X-5Yk" firstAttribute="leading" secondItem="d99-aG-vwV" secondAttribute="leading" constant="10" id="vaU-OJ-lPs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xVv-dT-sR1"/>
+                    <connections>
+                        <outlet property="codePicker" destination="OCA-Jz-eXI" id="YXi-S7-ggF"/>
+                        <outlet property="datePicker" destination="ntD-Gr-wI4" id="gQe-qN-iSG"/>
+                        <segue destination="AP9-Z9-cVS" kind="show" identifier="goToRates" id="uvN-3r-ham"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdt-sz-gLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="967" y="94"/>
+        </scene>
+        <!--RatesView-->
+        <scene sceneID="p05-d4-GfL">
+            <objects>
+                <tableViewController storyboardIdentifier="Rates" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AP9-Z9-cVS" userLabel="RatesView" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FIK-Qv-6bi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bkC-jG-0iY">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bkC-jG-0iY" id="Hqg-4z-6Ux">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AP9-Z9-cVS" id="SFD-Fd-6SX"/>
+                            <outlet property="delegate" destination="AP9-Z9-cVS" id="6iM-kl-54q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mbq-d8-PYA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSe-VP-3Ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="94"/>
         </scene>
     </scenes>
     <resources>
         <image name="background1" width="1344" height="896"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
