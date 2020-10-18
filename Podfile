@@ -15,7 +15,8 @@ target 'RatesRSS' do
   pod 'AlamofireRSSParser'
 
 	#прогресс спиннер
-	pod 'SVProgressHUD'
+	#pod 'SVProgressHUD', '~> 2.2'
+	#pod 'ProgressHUD', '~> 13.4'
 
   target 'RatesRSSTests' do
     inherit! :search_paths

@@ -36,16 +36,16 @@
                                 <rect key="frame" x="172" y="412" width="70" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="rJb-Ov-kOa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="rJb-Ov-kOa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="войти"/>
                                 <connections>
-                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mex-HB-S2Z"/>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYT-Lp-I64"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фото: Gerd Altmann, источник: Pixabay " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkf-7h-STx">
-                                <rect key="frame" x="10" y="824" width="279" height="18"/>
+                                <rect key="frame" x="10" y="824" width="399" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -65,6 +65,7 @@
                             <constraint firstItem="Tkf-7h-STx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MTL-Iv-gCb"/>
                             <constraint firstItem="W2x-7j-rQy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="QTm-By-X2G"/>
                             <constraint firstItem="1jL-TR-ZA0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WX3-yU-u5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tkf-7h-STx" secondAttribute="trailing" constant="5" id="cVV-DS-TV6"/>
                             <constraint firstItem="fBt-Gx-aL4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eiX-jN-Li1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fBt-Gx-aL4" secondAttribute="trailing" id="gLq-DA-0PK"/>
                             <constraint firstItem="W2x-7j-rQy" firstAttribute="top" secondItem="KcH-Q0-ews" secondAttribute="bottom" constant="50" id="oDh-14-plp"/>

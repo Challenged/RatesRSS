@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-import SVProgressHUD
+//import SVProgressHUD
 
 class ViewController: UIViewController {
 	// логин-экран
@@ -38,10 +38,11 @@ class ViewController: UIViewController {
 	@IBAction func loginTapped(_ sender: UIButton) {
 
 //		показать прогресс спиннер
-		SVProgressHUD.show()
+//		SVProgressHUD.setHapticsEnabled(true)
+//		SVProgressHUD.show(withStatus: "Подождите")
 
 // авторизация пользователя
-		Auth.auth().signIn(withEmail: login.text ?? "test@test.com", password: pwd.text ?? "test") { (authDataResult, error) in
+		Auth.auth().signIn(withEmail: login.text ?? "test@123.com", password: pwd.text ?? "test-test") { (authDataResult, error) in
 			// язык сообщений логин модуля
 			Auth.auth().languageCode = "ru"
 
@@ -53,20 +54,25 @@ class ViewController: UIViewController {
 				}))
 
 				//		скрыть прогресс спиннер
-						SVProgressHUD.dismiss()
+//				DispatchQueue.main.async {
+//					SVProgressHUD.showError(withStatus: "Ошибка входа: \(String(describing: error))")
+//				}
+//				SVProgressHUD.dismiss(withDelay: 0.7)
 				self.present(alert, animated: true, completion: nil)
 			} else {
 				// успешный вход
 
 				//	скрыть прогресс спиннер
-				SVProgressHUD.dismiss()
+//				DispatchQueue.main.async {
+//					SVProgressHUD.showSuccess(withStatus: "Вход успешно выполнен")
+//				}
+//				SVProgressHUD.dismiss(withDelay: 0.7)
 
 //				 переход к следующему экрану
 				self.performSegue(withIdentifier: "goToRSS", sender: self)
 			}
 		}
-	}
-
+	}	
 }
 
 //MARK: - Text Field Delegate Methods
