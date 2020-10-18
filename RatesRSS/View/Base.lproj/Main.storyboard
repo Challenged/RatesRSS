@@ -76,7 +76,7 @@
                         <outlet property="login" destination="KcH-Q0-ews" id="Gq9-Zq-DA1"/>
                         <outlet property="loginButton" destination="1jL-TR-ZA0" id="IVG-gv-a25"/>
                         <outlet property="pwd" destination="W2x-7j-rQy" id="7HN-Ak-u1M"/>
-                        <segue destination="c03-CH-Hcs" kind="show" identifier="goToRSS" destinationCreationSelector="goToRSS" id="E4l-b9-M3b"/>
+                        <segue destination="jSD-Yy-dXy" kind="show" identifier="goToRSS" destinationCreationSelector="goToRSS" id="E4l-b9-M3b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,32 +86,32 @@
         <!--RSSrequest-->
         <scene sceneID="u9g-lZ-cGQ">
             <objects>
-                <viewController storyboardIdentifier="RSS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c03-CH-Hcs" userLabel="RSSrequest" customClass="RSSViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RSSVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c03-CH-Hcs" userLabel="RSSrequest" customClass="RSSViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y8a-mV-sqI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="ntD-Gr-wI4">
-                                <rect key="frame" x="47" y="327" width="320" height="216"/>
+                                <rect key="frame" x="47" y="383" width="320" height="216"/>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCA-Jz-eXI">
-                                <rect key="frame" x="47" y="91" width="320" height="216"/>
+                                <rect key="frame" x="47" y="147" width="320" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-dw-MFs">
-                                <rect key="frame" x="140.5" y="573" width="133" height="30"/>
+                                <rect key="frame" x="140.5" y="629" width="133" height="30"/>
                                 <state key="normal" title="Узнать курс валют"/>
                                 <connections>
                                     <action selector="getRates:" destination="c03-CH-Hcs" eventType="touchUpInside" id="jYF-zR-pMR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите валюту и дату по желанию" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap0-1X-5Yk">
-                                <rect key="frame" x="10" y="50" width="394" height="21"/>
+                                <rect key="frame" x="10" y="106" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIi-0k-Hzf">
-                                <rect key="frame" x="125" y="623" width="164" height="30"/>
+                                <rect key="frame" x="125" y="679" width="164" height="30"/>
                                 <state key="normal" title="Обновить базу данных"/>
                                 <connections>
                                     <action selector="getDataForDB:" destination="c03-CH-Hcs" eventType="touchUpInside" id="TQq-JP-Yvz"/>
@@ -138,23 +138,23 @@
                     <connections>
                         <outlet property="codePicker" destination="OCA-Jz-eXI" id="YXi-S7-ggF"/>
                         <outlet property="datePicker" destination="ntD-Gr-wI4" id="gQe-qN-iSG"/>
-                        <segue destination="AP9-Z9-cVS" kind="show" identifier="goToRates" id="uvN-3r-ham"/>
+                        <segue destination="AP9-Z9-cVS" kind="show" identifier="goToRates" destinationCreationSelector="goToRates" id="uvN-3r-ham"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdt-sz-gLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="94"/>
+            <point key="canvasLocation" x="1876.8115942028987" y="93.75"/>
         </scene>
         <!--RatesView-->
         <scene sceneID="p05-d4-GfL">
             <objects>
-                <tableViewController storyboardIdentifier="Rates" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AP9-Z9-cVS" userLabel="RatesView" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RatesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AP9-Z9-cVS" userLabel="RatesView" customClass="RatesViewController" customModule="RatesRSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FIK-Qv-6bi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bkC-jG-0iY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="defaultCell" id="bkC-jG-0iY">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bkC-jG-0iY" id="Hqg-4z-6Ux">
@@ -172,7 +172,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSe-VP-3Ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755" y="94"/>
+            <point key="canvasLocation" x="2663.768115942029" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kq6-QU-rkI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jSD-Yy-dXy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="tvz-fF-c6B"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VgF-Z8-VIe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c03-CH-Hcs" kind="relationship" relationship="rootViewController" id="PDd-Ht-BCH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGO-Vf-c6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966.66666666666674" y="93.75"/>
         </scene>
     </scenes>
     <resources>
