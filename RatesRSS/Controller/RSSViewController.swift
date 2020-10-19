@@ -24,6 +24,11 @@ class RSSViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
 	let context = OHMySQLQueryContext()
 //	имя БД
 	let dbName = "currency_db"
+//	сокет БД
+	let socket =
+		"/usr/local/mysql/mysql.sock"
+//		"/usr/local/mysql-8.0.21-macos10.15-x86_64/mysql.sock"
+//	"/usr/local/mysql-8.0.21-macos10.15-x86_64/data/performance_schema/"
 
 	let codes = [
 		"Все",
@@ -115,7 +120,11 @@ class RSSViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
 //	MARK: - Методы БД
 	fileprivate func connect() {
 //		подключение к БД
-		let user = OHMySQLUser(userName: "root", password: "ironware-roost-adagio", serverName: "localhost", dbName: dbName, port: 3306, socket: "/usr/local/mysql/mysql.sock")
+		let user = OHMySQLUser(userName: "root", password: "ironware-roost-adagio", serverName: "localhost", dbName: dbName, port: 3306, socket:
+								socket
+//							   nil
+		)
+//		let user2 = OHMySQLUser(userName: <#T##String#>, password: <#T##String#>, serverName: <#T##String#>, dbName: <#T##String#>, port: <#T##UInt#>, socket: <#T##String?#>
 		coordinator = OHMySQLStoreCoordinator(user: user!)
 		coordinator.encoding = .UTF8MB4
 		coordinator.connect()
@@ -194,6 +203,8 @@ class RSSViewController: UIViewController, UIPickerViewDataSource, UIPickerViewD
 			destinationVC.date = datePicker.date
 //			передача имени БД
 			destinationVC.dbName = dbName
+//			передача сокета
+			destinationVC.socket = socket
 		}
         // Pass the selected object to the new view controller.
     }

@@ -20,6 +20,8 @@ class RatesViewController: UITableViewController {
 //	var url = String()
 
 	//  БД
+	//	сокет БД
+	var socket = ""
 	//	имя БД
 	var dbName = ""
 	//	координатор
@@ -28,7 +30,9 @@ class RatesViewController: UITableViewController {
 	var data: [[String : Any]]?
 	//	контекст
 	let context = OHMySQLQueryContext()
+	// таблица БД
 	let tableName = "currency"
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,7 +113,10 @@ class RatesViewController: UITableViewController {
 
 	fileprivate func connect() {
 //		подключение к БД
-		let user = OHMySQLUser(userName: "root", password: "ironware-roost-adagio", serverName: "localhost", dbName: dbName, port: 3306, socket: "/usr/local/mysql/mysql.sock")
+		let user = OHMySQLUser(userName: "root", password: "ironware-roost-adagio", serverName: "localhost", dbName: dbName, port: 3306, socket:
+								socket
+//							   nil
+		)
 		coordinator = OHMySQLStoreCoordinator(user: user!)
 		coordinator.encoding = .UTF8MB4
 		coordinator.connect()
